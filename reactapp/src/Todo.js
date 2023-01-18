@@ -7,12 +7,10 @@ export default function Todo() {
 const [tasks, setTask] = React.useState(
     [{
         title: "It's run time",
-        time:"5:00pm",
         completed: true
     },
     {
         title: "Yoga,Meditation time",
-        time:"5:30pm",
         completed: true
     }
     ])
@@ -44,7 +42,7 @@ setTask(tasks => {
 return (
     <div className='todo-container'>
         <div className="pending-todo">
-            <h2>Pending Todos</h2>
+            <h2 style= {{color:"green" }}>Pending Todos</h2>
             {tasks.map((task, index) => <Task {...task} key={index} index={index} updateTask={updateTask} removeTask={removeTask}/>)}
         </div>
         <div className="create-todo">

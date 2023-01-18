@@ -17,7 +17,7 @@ export default function CreateTask(props){
     }
     return (
         <form onSubmit = {handleSubmit}>
-             <input className="input" type="text" value={value} placeholder="Add ToDo's Here" onChange={(e) => setValue(e.target.value) } style/>
+             <input className="input" type="text" value={value} placeholder="Add ToDo's Here" onChange={(e) => setValue(e.target.value) } style={{height: '20px'}}/>
              <button type="submit" style={{background: "blue" ,color: "white" , fontSize: '20px'}}>Submit</button>
         </form>
     )
